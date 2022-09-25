@@ -17,7 +17,7 @@ class ZipCodeTextFieldDelegate: NSObject, UITextFieldDelegate {
             return false // do not change/accept characters in range if text is 5 digits or longer
         }
     
-        let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted // accept only Int values
+        let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted // accept only Int values, Instance Property, A character set containing only characters that don’t exist in the receiver
         return (string.rangeOfCharacter(from: invalidCharacters) == nil)
         
         /*
